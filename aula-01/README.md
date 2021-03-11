@@ -1,4 +1,7 @@
-# AulaBootstrap5W01
+# Aula 01
+- Criação de páginas;
+- Navegação e
+- Passagem de parâmetros por meio de rotas.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
