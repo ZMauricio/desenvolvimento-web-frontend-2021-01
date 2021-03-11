@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-9">
+
+    <form>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" [ngModel]="produto.nome">
+      </div>
+
+      <div class="mb-3">
+        <label for="preco" class="form-label">Preço</label>
+        <input type="number" class="form-control" id="preco" name="preco" [ngModel]="produto.preco">
+      </div>
+
+      <div class="mb-3">
+        <label for="validade" class="form-label">Validade</label>
+        <input type="text" class="form-control" id="validade" name="validade" [ngModel]="produto.validade">
+      </div>
+
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descricao</label><br>
+        <!--
+        <input type="text" class="form-control" id="descricao" name="descricao" [ngModel]="produto.descricao">
+        -->
+        <textarea name="descricao" id="descricao" cols="60" rows="10">{{produto.descricao}}</textarea>
+      </div>
+
+
+      <button type="submit" class="btn btn-warning">Editar</button>
+    </form>
+
+  </div>
+</div>
