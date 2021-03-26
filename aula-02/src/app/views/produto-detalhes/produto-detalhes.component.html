@@ -1,0 +1,107 @@
+
+<div class="row justify-content-center">
+
+
+
+  <div class="col-9" *ngIf="!habilitarEdicao">
+
+    <form>
+
+      <div class="row">
+
+        <div class="col-4 me-2">
+          <img [src]="produto.imgPath" style="width: 18rem;">
+        </div>
+
+        <div class="col-6">
+
+          <div class="mb-3">
+            <label for="preco" class="form-label">Preço</label>
+            <input type="number" class="form-control" id="preco" name="preco" [ngModel]="produto.preco" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label for="validade" class="form-label">Validade</label>
+            <input type="date" class="form-control" id="validade" name="validade" [ngModel]="produto.validade" readonly>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" [ngModel]="produto.nome" readonly>
+      </div>
+
+
+
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descricao</label><br>
+        <textarea name="descricao" id="descricao" cols="100" rows="10" readonly>{{produto.descricao}}</textarea>
+      </div>
+
+
+      <div class="d-grid gap-2">
+          <button type="button" class="btn btn-danger" (click)="deletar()">Deletar</button>
+
+          <button type="button" class="btn btn-warning" (click)="habilitar()">Editar</button>
+      </div>
+
+
+
+    </form>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="col-9" *ngIf="habilitarEdicao">
+
+    <form >
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="produtoEdit.nome">
+      </div>
+
+      <div class="mb-3">
+        <label for="preco" class="form-label">Preço</label>
+        <input type="number" class="form-control" id="preco" name="preco" [(ngModel)]="produtoEdit.preco">
+      </div>
+
+      <div class="mb-3">
+        <label for="validade" class="form-label">Validade</label>
+        <input type="date" class="form-control" id="validade" name="validade" [(ngModel)]="produtoEdit.validade">
+      </div>
+
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descricao</label><br>
+        <textarea name="descricao" id="descricao" cols="60" rows="10" [(ngModel)]="produtoEdit.descricao"></textarea>
+      </div>
+
+
+      <button type="button" class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
+
+      <button type="button" class="btn btn-success" (click)="editar()">Salvar</button>
+    </form>
+
+  </div>
+
+
+
+</div>
