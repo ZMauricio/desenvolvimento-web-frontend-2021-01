@@ -1,0 +1,21 @@
+{
+  "produtos": [
+    {
+      "nome": "Arroz Prato fino Editado",
+      "preco": 53,
+      "validade": "2021-10-21",
+      "descricao": "Arroz integral Edit test1",
+      "imgPath": "./../../../assets/imagem/rice.jpg",
+      "id": 2
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Son Goku",
+      "email": "goku@gmail.com",
+      "senha": "kamehameha",
+      "tipo": 1
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+
+<div class="row justify-content-center">
+
+
+
+  <div class="col-9">
+
+    <form >
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="produto.nome">
+      </div>
+
+      <div class="mb-3">
+        <label for="preco" class="form-label">Preço</label>
+        <input type="number" class="form-control" id="preco" name="preco" [(ngModel)]="produto.preco">
+      </div>
+
+      <div class="mb-3">
+        <label for="validade" class="form-label">Validade</label>
+        <input type="date" class="form-control" id="validade" name="validade" [(ngModel)]="produto.validade">
+      </div>
+
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descricao</label><br>
+        <textarea name="descricao" id="descricao" cols="60" rows="10" [(ngModel)]="produto.descricao"></textarea>
+      </div>
+
+
+
+      <div class="row">
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-secondary fw-bold" (click)="cancelar()">Cancelar</button>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="submit" class="btn btn-warning fw-bold" (click)="editar()">Salvar</button>
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+</div>

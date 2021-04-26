@@ -1,5 +1,5 @@
 # Aula 02
-- Criação do servie ProdutoService
+- Criação do service ProdutoService
 - Implementação das funcionalidades:
     - Listar produtos
     - Cadastrar produto
