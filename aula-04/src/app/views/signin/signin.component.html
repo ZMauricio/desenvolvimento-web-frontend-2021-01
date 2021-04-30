@@ -1,0 +1,36 @@
+<form>
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="usuario.nome">
+  </div>
+
+  <div class="mb-3">
+    <label for="cpf" class="form-label">CPF</label>
+    <input type="text" class="form-control" id="cpf" name="cpf" [(ngModel)]="usuario.cpf">
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="usuario.email">
+  </div>
+
+  <div class="mb-3">
+    <label for="data" class="form-label">Data Nascimento</label>
+    <input type="date" class="form-control" id="data" name="data" [(ngModel)]="usuario.dataNascimento">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="senha" class="form-label">Senha</label>
+    <input type="password" class="form-control" id="senha" name="senha" [(ngModel)]="usuario.senha">
+  </div>
+
+  <div class="mb-3">
+    <label for="senhaconfirm" class="form-label">Confimar Senha</label>
+    <input type="password" class="form-control" id="senhaconfirm" name="senhaconfirm" [(ngModel)]="senhaConfirm">
+  </div>
+
+  <button type="submit" class="btn btn-success" (click)="registrar()">Registrar</button>
+
+
+</form>

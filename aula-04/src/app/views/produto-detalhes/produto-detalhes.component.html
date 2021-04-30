@@ -1,0 +1,50 @@
+
+
+<div class="row justify-content-center">
+
+  <div class="row text-center">
+    <h1>Informações do produto</h1>
+  </div>
+
+  <div class="col-9">
+
+    <form>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="produto.nome">
+      </div>
+
+      <div class="mb-3">
+        <label for="valor" class="form-label">Preço</label>
+        <input type="number" class="form-control" id="valor" name="valor" [(ngModel)]="produto.valor">
+      </div>
+
+      <div class="mb-3">
+        <label for="validade" class="form-label">Data de validade</label>
+        <input type="date" class="form-control" id="validade" name="validade" [(ngModel)]="produto.validade">
+      </div>
+
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label> <br>
+        <textarea name="descricao" id="descricao" cols="30" rows="10" [(ngModel)]="produto.descricao"></textarea>
+      </div>
+
+      <div class="row">
+        <div class="d-grid gap-2 col-6">
+          <button type="submit" class="btn btn-danger" (click)="deletar()">Deletar</button>
+        </div>
+
+        <div class="d-grid gap-2 col-6">
+          <button type="submit" class="btn btn-warning" (click)="editar()">Editar</button>
+        </div>
+
+      </div>
+
+
+
+    </form>
+
+  </div>
+
+
+</div>

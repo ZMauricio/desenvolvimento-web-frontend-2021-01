@@ -1,0 +1,54 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Arroz Prato fino",
+      "descricao": "Arroz branco premium",
+      "validade": "2021-03-18",
+      "valor": 26,
+      "imgPath": "./../../../assets/imagem/rice.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Feijão",
+      "descricao": "Feijão tipo carioca",
+      "validade": "2021-03-18",
+      "valor": 7,
+      "imgPath": "./../../../assets/imagem/beans.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Suco",
+      "descricao": "Suco natural e detox",
+      "validade": "2021-03-18",
+      "valor": 5,
+      "imgPath": "./../../../assets/imagem/juice.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Iogurte",
+      "descricao": "iogurte natural",
+      "validade": "2021-04-29",
+      "valor": 10,
+      "imgPath": "./../../../assets/imagem/strawberry.jpg"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Son Goku",
+      "email": "goku@dbz.jp",
+      "senha": "kamehouse",
+      "cpf": "1900098-61",
+      "dataNascimento": "1985-01-01"
+    },
+    {
+      "id": 2,
+      "nome": "Son Gohan",
+      "email": "gohan@dbz.jp",
+      "senha": "arroz",
+      "cpf": "101202899-00",
+      "dataNascimento": "2021-05-13"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+
+<div class="row justify-content-center mt-3 mb-3">
+
+    <div class="card col-4 mb-2 me-2" style="width: 18rem;" *ngFor="let obj of produtos">
+      <img [src]="obj.imgPath" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">{{obj.id}} - {{obj.nome}}</h4>
+        <p class="card-text">{{obj.descricao}}.</p>
+        <h6>Preço: R$ {{obj.valor}}</h6>
+        <a routerLink="/produto-detalhes/{{obj.id}}"  class="btn btn-primary">Detalhes</a>
+      </div>
+    </div>
+
+</div>
