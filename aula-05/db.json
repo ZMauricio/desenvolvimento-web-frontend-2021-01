@@ -1,0 +1,49 @@
+{
+  "produtos": [
+    {
+      "nome": "Arroz Prato fino Editado",
+      "preco": 53,
+      "validade": "2021-10-21",
+      "descricao": "Arroz integral Edit test1",
+      "imgPath": "./../../../assets/imagem/rice.jpg",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "nome": "Feijão",
+      "preco": 10,
+      "validade": "2021-04-30",
+      "descricao": "Feijão carioca",
+      "imgPath": "./../../../assets/imagem/beans.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "iogurte",
+      "preco": 1,
+      "validade": "2021-05-08",
+      "descricao": "teste",
+      "imgPath": "./../../../assets/imagem/beans.jpg",
+      "perecivel": "s",
+      "descontos": [
+        "promocao",
+        "descontos"
+      ]
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Son Goku",
+      "email": "goku@gmail.com",
+      "senha": "kamehameha",
+      "tipo": 1
+    },
+    {
+      "id": 2,
+      "nome": "Trunks",
+      "email": "trunks@capsulecorporation.jp",
+      "senha": "futuro",
+      "tipo": 0
+    }
+  ]
+}
