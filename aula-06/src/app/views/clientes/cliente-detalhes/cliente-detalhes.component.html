@@ -1,0 +1,136 @@
+
+<div class="row">
+
+  <div class="col-9">
+
+    <h2>Cliente Detalhes</h2>
+
+    <form #formulario="ngForm" [formGroup]="clienteForm" (ngSubmit)="salvar()">
+
+
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" formControlName="nome" class="form-control" id="nome" name="nome" required
+        [class.invalid]="!clienteForm.controls['nome'].valid && clienteForm.controls['nome'].touched"
+        >
+
+        <div class="alert alert-danger" *ngIf="(clienteForm.get('nome')?.errors?.required ||
+        clienteForm.get('nome')?.errors?.minglength || clienteForm.get('nome')?.errors?.maxlength) && (formulario.submitted || clienteForm.get('nome')?.touched)">
+          Informe um nome que possua de 5 a 100 caracteres
+        </div>
+
+      </div>
+
+
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" formControlName="email" class="form-control" id="email" name="email" required
+        [class.invalid]="!clienteForm.controls['email'].valid && clienteForm.controls['email'].touched"
+        >
+
+
+        <div class="alert alert-danger" *ngIf="(clienteForm.get('email')?.errors?.required ||
+        clienteForm.get('email')?.errors?.email) && (formulario.submitted || clienteForm.get('email')?.touched)">
+          Informe o e-mail
+        </div>
+
+      </div>
+
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" formControlName="senha" class="form-control" id="senha" name="senha" required
+        [class.invalid]="!clienteForm.controls['senha'].valid && clienteForm.controls['senha'].touched"
+        >
+
+
+        <div class="alert alert-danger" *ngIf="(clienteForm.get('senha')?.errors?.required) && (formulario.submitted || clienteForm.get('senha')?.touched)">
+          Informe a senha
+        </div>
+
+      </div>
+
+      <div class="mb-3">
+        <label for="rua" class="form-label">Rua</label>
+        <input type="text" formControlName="rua" class="form-control" id="rua" name="rua" required
+        [class.invalid]="!clienteForm.controls['rua'].valid && clienteForm.controls['rua'].touched">
+
+        <div class="alert alert-danger" *ngIf="(clienteForm.get('rua')?.errors?.required) && (formulario.submitted || clienteForm.get('rua')?.touched)">
+          Informe a rua
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="numero" class="form-label">Número</label>
+        <input type="number" formControlName="numero" class="form-control" id="numero" name="numero" required
+        [class.invalid]="!clienteForm.controls['numero'].valid && clienteForm.controls['numero'].touched">
+
+        <div class="alert alert-danger" *ngIf="(clienteForm.get('numero')?.errors?.required || clienteForm.get('numero')?.errors?.min) && (formulario.submitted || clienteForm.get('numero')?.touched)">
+          Informe o número da residência
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="complemento" class="form-label">Complemento</label>
+        <input type="text" formControlName="complemento" class="form-control" id="complemento" name="complemento" required
+        [class.invalid]="!clienteForm.controls['complemento'].valid && clienteForm.controls['complemento'].touched"
+        >
+
+        <div class="alert alert-danger" *ngIf="(clienteForm.get('complemento')?.errors?.required) && (formulario.submitted || clienteForm.get('complemento')?.touched)">
+          Informe o complemento
+        </div>
+
+      </div>
+
+
+      <div class="mb-3">
+        <label for="bairro" class="form-label">Bairro</label>
+        <input type="text" formControlName="bairro" class="form-control" id="bairro" name="bairro" required
+        [class.invalid]="!clienteForm.controls['bairro'].valid && clienteForm.controls['bairro'].touched"
+        >
+
+        <div class="alert alert-danger" *ngIf="(clienteForm.get('bairro')?.errors?.required) && (formulario.submitted || clienteForm.get('bairro')?.touched)">
+          Informe o bairro
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input type="text" formControlName="cidade" class="form-control" id="cidade" name="cidade" required
+        [class.invalid]="!clienteForm.controls['cidade'].valid && clienteForm.controls['cidade'].touched"
+        >
+
+        <div class="alert alert-danger" *ngIf="(clienteForm.get('cidade')?.errors?.required) && (formulario.submitted || clienteForm.get('cidade')?.touched)">
+          Informe a cidade
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <input type="text" formControlName="estado" class="form-control" id="estado" name="estado" required
+        [class.invalid]="!clienteForm.controls['estado'].valid && clienteForm.controls['estado'].touched"
+        >
+
+
+        <div class="alert alert-danger" *ngIf="(clienteForm.get('estado')?.errors?.required) && (formulario.submitted || clienteForm.get('estado')?.touched)">
+          Informe o estado
+        </div>
+      </div>
+
+
+      <button type="button" class="btn btn-danger" (click)="deletar()">
+        Deletar
+      </button>
+
+      <button type="submit" class="btn btn-success">
+        Salvar
+      </button>
+
+    </form>
+
+
+  </div>
+
+</div>
+
+

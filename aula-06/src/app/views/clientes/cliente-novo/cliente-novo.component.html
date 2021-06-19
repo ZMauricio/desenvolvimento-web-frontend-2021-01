@@ -1,0 +1,70 @@
+
+<div class="row">
+
+  <div class="col-9">
+
+    <h2>Cliente Novo</h2>
+
+    <form #formulario="ngForm" [formGroup]="clienteForm" (ngSubmit)="cadastrar()">
+
+
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" formControlName="nome" class="form-control" id="nome" name="nome" required>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" formControlName="email" class="form-control" id="email" name="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" formControlName="senha" class="form-control" id="senha" name="senha" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="rua" class="form-label">Rua</label>
+        <input type="text" formControlName="rua" class="form-control" id="rua" name="rua" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="numero" class="form-label">Número</label>
+        <input type="number" formControlName="numero" class="form-control" id="numero" name="numero" required>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="complemento" class="form-label">Complemento</label>
+        <input type="text" formControlName="complemento" class="form-control" id="complemento" name="complemento" required>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="bairro" class="form-label">Bairro</label>
+        <input type="text" formControlName="bairro" class="form-control" id="bairro" name="bairro" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input type="text" formControlName="cidade" class="form-control" id="cidade" name="cidade" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <input type="text" formControlName="estado" class="form-control" id="estado" name="estado" required>
+      </div>
+
+
+      <button type="submit" class="btn btn-success">
+        Salvar
+      </button>
+
+    </form>
+
+
+  </div>
+
+</div>
+

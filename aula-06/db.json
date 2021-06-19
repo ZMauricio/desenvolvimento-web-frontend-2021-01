@@ -1,0 +1,129 @@
+{
+  "produtos": [
+    {
+      "nome": "Arroz Prato fino Editado",
+      "preco": 53,
+      "validade": "2021-10-21",
+      "descricao": "Arroz integral Edit test1",
+      "imgPath": "./../../../assets/imagem/rice.jpg",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "nome": "Feijão",
+      "preco": 10,
+      "validade": "2021-04-30",
+      "descricao": "Feijão carioca",
+      "imgPath": "./../../../assets/imagem/beans.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "iogurte",
+      "preco": 1,
+      "validade": "2021-05-08",
+      "descricao": "teste",
+      "imgPath": "./../../../assets/imagem/beans.jpg",
+      "perecivel": "s",
+      "descontos": [
+        "promocao",
+        "descontos"
+      ]
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Son Goku",
+      "email": "goku@gmail.com",
+      "senha": "kamehameha",
+      "tipo": 1
+    },
+    {
+      "id": 2,
+      "nome": "Trunks",
+      "email": "trunks@capsulecorporation.jp",
+      "senha": "futuro",
+      "tipo": 0
+    }
+  ],
+  "clientes": [
+    {
+      "id": 2,
+      "nome": "Kami Sama",
+      "email": "kami@gmail.com",
+      "senha": "1234",
+      "rua": "Templo",
+      "numero": 1000000,
+      "complemento": "céu",
+      "bairro": "aéreo",
+      "cidade": "Templária",
+      "estado": "Minas Gerais",
+      "status": false
+    },
+    {
+      "id": 5,
+      "nome": "Picollo",
+      "email": "picollo@gmail.com",
+      "senha": "123",
+      "rua": "teste",
+      "numero": 3,
+      "complemento": "teste",
+      "bairro": "teste",
+      "cidade": "teste",
+      "estado": "teste",
+      "status": false
+    },
+    {
+      "id": 6,
+      "nome": "Mestre Kame",
+      "email": "kame@gmail.com",
+      "senha": "123",
+      "rua": "Sea",
+      "numero": 3,
+      "complemento": "casa",
+      "bairro": "ocean",
+      "cidade": "ocean",
+      "estado": "World",
+      "status": false
+    },
+    {
+      "id": 8,
+      "nome": "Naruto",
+      "email": "naruto@gmail.com",
+      "senha": "123",
+      "rua": "folha",
+      "numero": 3,
+      "complemento": "casa",
+      "bairro": "casa",
+      "cidade": "folha",
+      "estado": "Fogo",
+      "status": false
+    },
+    {
+      "id": 9,
+      "nome": "Luffy",
+      "email": "luffy@gmail.com",
+      "senha": "lyffy",
+      "rua": "Sea",
+      "numero": 3,
+      "complemento": "Navio",
+      "bairro": "Ocean",
+      "cidade": "Marine",
+      "estado": "Water",
+      "status": false
+    },
+    {
+      "id": 10,
+      "nome": "Zoro Spadachin",
+      "email": "zoro@gmail.com",
+      "senha": "zoro",
+      "rua": "Espada",
+      "numero": 3,
+      "complemento": "Espada",
+      "bairro": "Marimo",
+      "cidade": "sea",
+      "estado": "Marine",
+      "status": false
+    }
+  ]
+}

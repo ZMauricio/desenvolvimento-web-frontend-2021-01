@@ -1,0 +1,108 @@
+<div class="row">
+  <div class="col-9">
+
+    <h1>Produto Novo</h1>
+
+    <form #formulario="ngForm" [formGroup]="produtoForm" (ngSubmit)="cadastrar()">
+
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+
+        <input type="text" formControlName="nome" class="form-control" id="nome" name="nome" required
+         [class.invalid]="!produtoForm.controls['nome'].valid && produtoForm.controls['nome'].touched">
+
+        <div class="alert alert-danger" *ngIf="(produtoForm.get('nome')?.errors?.required ||
+        produtoForm.get('nome')?.errors?.minglength || produtoForm.get('nome')?.errors?.maxlength) && (formulario.submitted || produtoForm.get('nome')?.touched)">
+          Informe um nome que possua de 3 a 100 caracteres
+        </div>
+
+      </div>
+
+
+      <div class="mb-3">
+        <label for="preco" class="form-label">Preço</label>
+
+        <input type="number" formControlName="preco" class="form-control" id="preco" name="preco" [class.invalid]="!produtoForm.controls['preco'].valid && produtoForm.controls['preco'].touched">
+
+        <div class="alert alert-danger" *ngIf="(produtoForm.get('preco')?.errors?.required || produtoForm.get('preco')?.errors?.min) && (formulario.submitted || produtoForm.get('preco')?.touched)">
+          Informe o preço corretamente!
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="validade" class="form-label">Validade</label>
+
+        <input type="date" formControlName="validade" class="form-control" id="validade" name="validade" [class.invalid]="!produtoForm.controls['validade'].valid && produtoForm.controls['validade'].touched">
+
+        <div class="alert alert-danger" *ngIf="produtoForm.get('validade')?.errors?.required && (formulario.submitted || produtoForm.get('validade')?.touched)">
+          Informe a data de validade.
+        </div>
+      </div>
+
+
+
+      <div class="mb-3">
+        <h3>Perecível</h3>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="perecivel" formControlName="perecivel" id="sim" value="s">
+          <label class="form-label">Sim</label>
+        </div>
+
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="perecivel" formControlName="perecivel" id="nao" value="n">
+          <label class="form-label">Não</label>
+        </div>
+
+
+        <div class="alert alert-danger" *ngIf="produtoForm.get('perecivel')?.errors?.required && formulario.submitted">
+          Informe se o produto é ou não perecível
+        </div>
+
+      </div>
+
+
+
+
+
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descricao</label><br>
+
+        <textarea formControlName="descricao" name="descricao" id="descricao" cols="60" rows="10"  [class.invalid]="!produtoForm.controls['descricao'].valid && produtoForm.controls['descricao'].touched"></textarea>
+
+        <div class="alert alert-danger" *ngIf="(produtoForm.get('descricao')?.errors?.required || produtoForm.get('descricao')?.errors?.maxlength) && (formulario.submitted || produtoForm.get('descricao')?.touched)">
+          Faça a descrição do produto
+        </div>
+
+      </div>
+
+
+      <div class="mb-3">
+        <h3>Promoções</h3>
+
+        <div *ngFor="let obj of situacaoList; let i=index">
+
+          <label class="form-label">
+            {{obj.nome}}
+            <input type="checkbox" [value]="obj.value" [checked]="obj.checked"
+            (change)="onSelectionChange($event, i)"
+            >
+          </label>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+      <button type="submit" class="btn btn-success">
+        Cadastrar
+      </button>
+
+    </form>
+
+  </div>
+</div>

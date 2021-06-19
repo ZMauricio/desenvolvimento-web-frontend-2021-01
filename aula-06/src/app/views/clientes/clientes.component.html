@@ -1,0 +1,59 @@
+<div class="row">
+
+  <div class="col-6">
+    <div class="row">
+      <div class="col-8">
+        <h1>Gerenciamento dos clientes</h1>
+      </div>
+
+      <div class="col-4">
+        <button class="btn btn-primary" [routerLink]="['/clientes/novo']">
+          Novo
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#Código</th>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Situação</th>
+            <th scope="col">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let cliente of clientes">
+            <th scope="row">{{cliente.id}}</th>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.email}}</td>
+            <td>{{cliente.status}}</td>
+            <td>
+              <button class="btn btn-warning" routerLink="/clientes/detalhes/{{cliente.id}}">
+                Editar
+              </button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+    </div>
+
+  </div>
+
+
+
+  <div class="col-6">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+
+
+
+

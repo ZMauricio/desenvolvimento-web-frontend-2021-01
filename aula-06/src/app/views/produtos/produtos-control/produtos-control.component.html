@@ -1,0 +1,52 @@
+
+<div class="row">
+  <h1>Gerenciamento de produtos</h1>
+
+  <div class="row">
+    <div class="col-4">
+      <button type="button" class="btn btn-primary" [routerLink]="['/produtos/novo']">
+        Novo
+      </button>
+    </div>
+  </div>
+
+
+  <table class="table table-striped table-hover">
+
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Data de validade</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Opções</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let obj of produtos">
+        <th scope="row">{{obj.id}}</th>
+        <td>{{obj.nome}}</td>
+        <td>{{obj.validade | date: 'dd/MM/yyyy'}}</td>
+        <td>{{obj.preco | currency }}</td>
+        <td>
+          <button type="button" class="btn btn-danger btn-sm" (click)="deletar(obj.id)">
+            Deletar
+          </button>
+
+          <button type="button" class="btn btn-warning btn-sm" routerLink="/produtos/detalhes/{{obj.id}}">
+            Editar
+          </button>
+        </td>
+      </tr>
+
+
+    </tbody>
+
+  </table>
+
+
+
+</div>
+
